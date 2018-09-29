@@ -5,6 +5,10 @@ class RepositoriesController < ApplicationController
         @repositories = @user.repositories.all
     end
 
+    def new
+
+    end
+
     private
 
     def set_user
