@@ -9,7 +9,7 @@
         <%=link_to "Home", root_path , class: "nav-link"%>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Repositories</a>
+                <%=link_to "Repositories", user_repositories_path(current_user),class: "nav-link"%>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Settings</a>
