@@ -1,1 +1,10 @@
-This will be the page where you'll be able to create new repositories.
+<header>MINIMALISTIC FORM</header>
+
+<%=form_for [@user,@repository],html: {id: "form", class: "topLeft"}  do |f|%>
+    <%=f.text :name%>
+    <input id="name" type="text" placeholder="NAME">
+    <input id="email" type="text" placeholder="E-MAIL">
+    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+    <input id="submit" type="submit" value="GO!">
+
+<%end %>>

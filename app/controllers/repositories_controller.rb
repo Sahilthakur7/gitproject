@@ -6,7 +6,7 @@ class RepositoriesController < ApplicationController
     end
 
     def new
-
+        @repository = current_user.repositories.new
     end
 
     private
