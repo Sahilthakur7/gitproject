@@ -1,10 +1,8 @@
 <header>MINIMALISTIC FORM</header>
 
 <%=form_for [@user,@repository],html: {id: "form", class: "topLeft"}  do |f|%>
-    <%=f.text :name%>
-    <input id="name" type="text" placeholder="NAME">
-    <input id="email" type="text" placeholder="E-MAIL">
-    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-    <input id="submit" type="submit" value="GO!">
-
-<%end %>>
+    <%=f.text_field :name, id: "name", placeholder: "NAME"%>
+    <%=f.text_field :language, placeholder: "LANGUAGE"%>
+    <%=f.text_area :description , placeholder: "DESCRIPTION"%>
+    <%=f.submit "CREATE" , id: "submit"%>
+<%end %>

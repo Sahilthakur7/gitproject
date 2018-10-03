@@ -1,5 +1,18 @@
 Hello. Your repositories will be stored here in the future.
+<br>
+<hr>
 
-<%@repositories.each do |repository|%>
-    <%=repository.name%>
-<%end%>
+<div class="repositories">
+    <table class="repo_table">
+        <th>NAME </th>
+        <th>LANGUAGE </th>
+        <th>DESCRIPTION</th>
+        <%@repositories.each do |repo|%>
+            <tr>
+                <td><%=repo.name%></td>
+                <td><%=repo.language%></td>
+                <td><%=repo.description%></td>
+            </tr>
+        <%end%>
+    </table>
+</div>
