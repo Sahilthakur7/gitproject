@@ -1093,7 +1093,7 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 body {
     font-family: 'Lato', sans-serif;
     background: #e2dedb;
-    color: #b3aca7;
+    color: black;
 
 }
 
@@ -1197,4 +1197,13 @@ textarea:hover {
 .repo_table th,td {
     padding: 10px;
     border: 1px solid black;
+}
+
+.signing_up{
+    color: black;
+    display: inline-block;
+}
+
+.signing_container {
+    text-align: center;
 }

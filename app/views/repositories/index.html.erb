@@ -1,4 +1,4 @@
-Hello. Your repositories will be stored here in the future.
+Hello, here is a list of your repositories. 
 <br>
 <hr>
 
@@ -9,7 +9,7 @@ Hello. Your repositories will be stored here in the future.
         <th>DESCRIPTION</th>
         <%@repositories.each do |repo|%>
             <tr>
-                <td><%=repo.name%></td>
+                <td><%=link_to repo.name, user_repository_path(repo.user,repo)%></td>
                 <td><%=repo.language%></td>
                 <td><%=repo.description%></td>
             </tr>
