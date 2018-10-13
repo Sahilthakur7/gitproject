@@ -31,11 +31,9 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <%=form_tag(users_path,method: :get) do%>
-                <%=text_field_tag :search, params[:search],placeholder: "Search", class: "form-control mr-sm-2"%>
-                <%=submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0 mybtn'%>
-            <%end%>
-        </form>
+        <%=form_tag({controller: "users",action: "index"},method: :get,class: "form-inline my-2 my-lg-0") do%>
+            <%=text_field_tag :search, params[:search],placeholder: "Search", class: "form-control mr-sm-2"%>
+            <%=submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0 mybtn'%>
+        <%end%>
     </div>
 </nav>

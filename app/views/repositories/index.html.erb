@@ -7,11 +7,13 @@ Hello, here is a list of your repositories.
         <th>NAME </th>
         <th>LANGUAGE </th>
         <th>DESCRIPTION</th>
+        <th>LAST UPDATED</th>
         <%@repositories.each do |repo|%>
             <tr>
                 <td><%=link_to repo.name, user_repository_path(repo.user,repo)%></td>
                 <td><%=repo.language%></td>
                 <td><%=repo.description%></td>
+                <td><%=repo.updated_at%></td>
             </tr>
         <%end%>
     </table>

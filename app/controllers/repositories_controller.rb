@@ -2,7 +2,7 @@ class RepositoriesController < ApplicationController
     before_action :set_user
 
     def index
-        @repositories = @user.repositories.all
+        @repositories = @user.repositories.all.order("updated_at DESC")
     end
 
     def show

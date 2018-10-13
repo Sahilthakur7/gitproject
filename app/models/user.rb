@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :repositories
+
+  def to_s
+      name
+  end
+
+  def self.search(search)
+      where("name LIKE ?","%#{search}%")
+  end
 end
