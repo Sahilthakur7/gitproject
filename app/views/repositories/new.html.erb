@@ -4,5 +4,6 @@
     <%=f.text_field :name, id: "name", placeholder: "NAME"%>
     <%=f.text_field :language, placeholder: "LANGUAGE"%>
     <%=f.text_area :description , placeholder: "DESCRIPTION"%>
+    <%=f.file_field :code_files, multipart: true%>
     <%=f.submit "CREATE" , id: "submit"%>
 <%end %>

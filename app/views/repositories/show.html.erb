@@ -1,1 +1,10 @@
-The name of this repository is <%=@repository.name%>
+<h2>The name of this repository is <%=@repository.name%></h2>
+<h5>The number of files in this repository is <%=@repository.code_files.count%></h5>
+</br>
+<h6>The files that belong to repository:-</h6>
+(Click on any file to download individually)
+</br>
+
+<%@repository.code_files.each do |file|%>
+<%= link_to file.blob.filename, rails_blob_path(file, disposition: "attachment")%>
+<%end%>

@@ -15,6 +15,7 @@ class RepositoriesController < ApplicationController
 
     def create
         @repository = current_user.repositories.new(repository_params)
+        @repository.code_files.attach(params[:repository][:code_files])
         if @repository.save!
             redirect_to user_repositories_path(current_user)
         end
@@ -27,6 +28,6 @@ class RepositoriesController < ApplicationController
     end
 
     def repository_params
-        params.require(:repository).permit(:name,:language,:description)
+        params.require(:repository).permit(:name,:language,:description,code_files: [])
     end
 end
