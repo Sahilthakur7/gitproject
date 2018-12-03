@@ -1,9 +1,9 @@
 <header>NEW REPOSITORY FORM</header>
 
-<%=form_for [@user,@repository],html: {id: "form", class: "topLeft"}  do |f|%>
+<%=form_for [@user,@repository],html: {id: "form", class: "topLeft"},multipart: true do |f|%>
     <%=f.text_field :name, id: "name", placeholder: "NAME"%>
     <%=f.text_field :language, placeholder: "LANGUAGE"%>
     <%=f.text_area :description , placeholder: "DESCRIPTION"%>
-    <%=f.file_field :code_files, multipart: true%>
+    <%=f.file_field :code_files, multiple: true%>
     <%=f.submit "CREATE" , id: "submit"%>
 <%end %>

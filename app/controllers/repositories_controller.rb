@@ -21,6 +21,15 @@ class RepositoriesController < ApplicationController
         end
     end
 
+    def download
+        @repository = @user.repositories.find(params[:id])
+        @repository.code_files.each do |file|
+            send_file rails_blob_path(file, disposition: "attachment")
+            # send_file file
+        end
+        redirect_to @repository
+    end
+
     private
 
     def set_user

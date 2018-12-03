@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users , :controllers => { registrations: 'registrations'}
 
   resources :users do
-      resources :repositories
+      resources :repositories do
+          member { get :download }
+      end
   end
 end
